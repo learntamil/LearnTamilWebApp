@@ -1,6 +1,7 @@
 package com.learntamil;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import org.springframework.boot.SpringApplication;
@@ -72,10 +73,7 @@ public class LearnTamilApplication
 		    public ViewResolver getViewResolver(){
 		    	ContentNegotiatingViewResolver contentNegotiatingViewResolver = new ContentNegotiatingViewResolver();
 				contentNegotiatingViewResolver.setContentNegotiationManager(configureContentNegotiationManager());
-						
-		        List<View> defaultViews = new ArrayList<>();
-		        defaultViews.add(new MappingJackson2JsonView());
-		        contentNegotiatingViewResolver.setDefaultViews(defaultViews);
+		        contentNegotiatingViewResolver.setDefaultViews(Arrays.asList(new MappingJackson2JsonView()));
 		        
 		        contentNegotiatingViewResolver.setOrder(1);
 		        return contentNegotiatingViewResolver;
