@@ -9,6 +9,6 @@ public class WebController
 	@GetMapping("/")
 	public String welcome()
 	{
-		return "index";
+		return "/html/index.html";
 	}
 }
