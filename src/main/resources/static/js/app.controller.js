@@ -59,9 +59,9 @@
 	}
 
 	HomeScreenController.$inject=['$log','$location','DEFAULT_ROUTE_PATH'];
-	HomeScreenController = ($log, $location, DEFAULT_ROUTE_PATH) =>
+	function HomeScreenController  ($log, $location, DEFAULT_ROUTE_PATH)
 	{
 		$log.debug("HomeScreenController");
 		let vm = this;
-	};
+	}
 })()

@@ -1,0 +1,29 @@
+<div class="navbar-header">
+  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+    <span class="sr-only">Toggle navigation</span>
+    <!--Below three lines of code used for responsive layouts to create a button that looks like ≡ on narrow browser screens-->
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+  </button>
+  <span class="navbar-brand">HIL</span>
+</div>
+<div id="navbar" class="navbar-collapse collapse">
+  <ul class="nav navbar-nav">
+    <li><a ng-href="#!/">Home</a></li>
+  </ul>
+  <ul class="nav navbar-nav navbar-right">
+    <li class="active" ng-hide="AUTHENTICATION_MODAL.isAuthorised"><a href="#!/login">Login<span class="sr-only">(current)</span></a></li>
+    <li class="dropdown" ng-show="AUTHENTICATION_MODAL.isAuthorised">
+
+      <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><!-- Action --><!-- <span class="glyphicon glyphicon-user btn-xs" alt="Action" /> --><i class="fa fa-user-circle-o fa-fw"></i><span class="caret"></span></a>
+      <ul class="dropdown-menu">
+        <li><a ng-click="navController.logout()"><i class="fa fa-sign-out fa-fw"></i>&nbsp;&nbsp;Logout</a></li>
+        <li role="separator" class="divider"></li>
+        <li class="dropdown-header">User</li>
+
+        
+      </ul>
+    </li>
+  </ul>
+</div><!--/.nav-collapse -->
